@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>mainMenu</title>
+    <script src="scripts/newsContainer.js"></script>
+    <style>
+        body{
+            background: black;
+        }
+    </style>
+</head>
+<body>
+<header class="page-header">
+    <h1 id="page-name">HeartBeat Music News</h1>
+</header>
+<div class="page-main-block">
+    <nav class="nav-menu">
+        <a href="mainMenu.html" class="main-page-ref">
+            <p>Main</p>
+        </a>
+        <ul class="nav-menu-ul">
+            <li class="nav-menu-li"><a href="mainTop.html" class="nav-menu-ref">Top</a></li>
+            <li class="nav-menu-li"><a href="" class="nav-menu-ref">Charts</a></li>
+            <li class="nav-menu-li"><a href="" class="nav-menu-ref">Upcoming</a></li>
+        </ul>
+    </nav>
+    <div class="main-info-block">
+        <div class="main-news">
+            <h3>News</h3>
+            <div id="news-container-main" class="news-main-container">            </div>
+            <div id="news-form-container">
+                <form id="news-form">
+                    <label>
+                        Заголовок:
+                        <input type="text" id="news-title" required>
+                    </label>
+                    <label>
+                        Описание:
+                        <textarea id="news-description" rows="3" required></textarea>
+                    </label>
+                    <label>
+                        Ссылка на изображение:
+                        <input type="url" id="news-image" required>
+                    </label>
+                    <div id="button-news-container">
+                        <button class="news-form-button" type="submit">Add</button>
+                        <button class="news-form-button" type="button" id="load-news">Download</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="main-radio">
+            Z-
+        </div>
+        <div class="main-chat">
+
+        </div>
+    </div>
+</div>
+<footer></footer>
+</body>
+</html>
