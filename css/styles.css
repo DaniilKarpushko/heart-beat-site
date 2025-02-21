@@ -1,9 +1,12 @@
 
 .page-header {
+    top: 0;
+    position: sticky;
     background-color: darkred;
     border-top: 2px solid;
     border-bottom: 2px solid;
-    border-color: rgba(165,157,180,0.79);
+    border-color: rgba(165, 157, 180, 0.79);
+    z-index: 1000;
 }
 
 #page-name {
@@ -14,8 +17,8 @@
 
 .page-main-block {
     margin-top: 2%;
-    background-color: rgba(152,52,57,0.75);
-    border: 2px solid rgba(165,157,180,0.79);
+    background-color: rgba(152, 52, 57, 0.75);
+    border: 2px solid rgba(165, 157, 180, 0.79);
     font-family: "Cascadia Mono", cursive;
 }
 
@@ -27,40 +30,20 @@
     display: inline-flex;
 }
 
-.nav-menu .nav-menu-ul {
-    width: 100%;
-    float: right;
-    list-style: none;
-    display: flex;
-}
-.nav-menu .nav-menu-ul .nav-menu-li {
-    padding: 0 5%;
-    list-style: none;
-}
-
-.nav-menu .nav-menu-ul .nav-menu-li .nav-menu-ref {
-    color: black;
-    text-decoration: none;
-    text-transform: uppercase;
-    transition: .3s;
-}
-
-.nav-menu .nav-menu-ul .nav-menu-li .nav-menu-ref:hover {
-    color: white;
-    text-decoration: underline;
-}
-
-nav .main-page-ref {
+nav .nav-page-ref {
     padding: 0 5%;
     color: black;
-    background-color: rgba(255, 255, 255, 0.69);
     float: left;
     font-weight: bolder;
     text-decoration: none;
     transition: .3s;
 }
 
-nav .main-page-ref:hover {
+nav .nav-page-ref.active {
+    background-color: rgba(255, 255, 255, 0.69);
+}
+
+nav .nav-page-ref:hover {
     background-color: white;
 }
 
@@ -98,6 +81,7 @@ nav .main-page-ref:hover {
     text-align: center;
     align-items: center;
     display: grid;
+    border: 2px solid black;
 }
 
 .news-main-container {
@@ -108,6 +92,12 @@ nav .main-page-ref:hover {
     gap: 20px;
     justify-content: center;
     align-items: start;
+}
+
+#news-title {
+    margin-top: 0;
+    padding-top: 2%;
+    padding-bottom: 2%;
 }
 
 .news-container {
@@ -142,6 +132,7 @@ nav .main-page-ref:hover {
 }
 
 .news-container .buttons {
+    font-family: "Cascadia Mono", cursive;
     display: flex;
     justify-content: space-between;
     max-height: 50%;
@@ -182,11 +173,8 @@ nav .main-page-ref:hover {
     display: flex;
     justify-content: center;
     align-content: center;
-    margin-bottom: 5%;
     margin-top: 5%;
     padding-bottom: 2%;
-    border-bottom: black 2px solid;
-    border-radius: 20px;
 }
 
 #news-form {
@@ -216,21 +204,26 @@ nav .main-page-ref:hover {
 }
 
 .news-form-button {
+    font-family: "Cascadia Mono", cursive;
     width: 100%;
     margin-top: 1%;
     padding: 1%;
     margin-right: 1%;
     margin-left: 1%;
-    border: black 0 solid;
-    background-color: darkred;
-    color: white;
+    border: black 1px solid;
+    background-color: white;
+    color: black;
     cursor: pointer;
     border-radius: 5px;
     transition: .3s;
 }
 
 .news-form-button:hover {
-    background-color: red;
+    font-weight: bold;
+}
+
+.news-form-button:active {
+    background-color: rgb(255, 244, 243);
 }
 
 #button-news-container {
@@ -245,5 +238,115 @@ nav .main-page-ref:hover {
 }
 
 .main-radio {
-    background-color: #000000;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+
+.main-radio-player {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    text-align: center;
+    background-color: rgb(255, 244, 243);
+    max-width: 300px;
+    min-width: 200px;
+    width: 40%;
+    border-radius: 10px;
+    display: grid;
+}
+
+.song-name-header {
+    margin: 0%;
+}
+
+.artist-header{
+    margin: 0%;
+}
+
+.song-slider{
+    width: 100%;
+    position: relative;
+}
+
+.seek-bar{
+    -webkit-appearance: none;
+    width: 80%;
+    height: 5px;
+    border-radius: 10px;
+    background: #ffffff;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.seek-bar::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 1px;
+    height: 20px;
+    box-shadow: -400px 0 0 400px rgba(255, 50, 82, 0.79);
+}
+
+.controls {
+    justify-content: space-around;
+    display: inline-flex;
+    margin-bottom: 3%;
+}
+
+.control-btn {
+    font-family: "Cascadia Mono", cursive;
+    width: 35%;
+    padding: 5%;
+    border-radius: 0;
+    background-color: white;
+    cursor: pointer;
+    border: none;
+}
+
+.control-btn:hover {
+    font-weight: bold;
+}
+
+.control-btn:active {
+    font-weight: bolder;
+    background-color: rgb(255, 244, 243);
+}
+
+footer {
+    padding-bottom: 2%;
+    background-color: rgb(255, 244, 243);
+    font-family: "Cascadia Mono", cursive;
+}
+
+footer aside {
+    float: right;
+    margin-right: 1%;
+}
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+.footer__instrument-container {
+    align-items: center;
+    color: black;
+}
+
+.main-gallery
+{
+    display: grid;
+    object-fit: fill;
+    background-color: black;
+}
+
+.main-gallery-img-container {
+    border-radius: 10px;
+    margin: 2%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-gallery-img-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
 }

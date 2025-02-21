@@ -5,6 +5,8 @@
     <link rel="stylesheet" href="css/styles.css">
     <title>mainMenu</title>
     <script src="scripts/newsContainer.js"></script>
+    <script src="scripts/songScript.js" defer></script>
+    <script src="scripts/mainPageScript.js" defer></script>
     <style>
         body{
             background: black;
@@ -17,24 +19,39 @@
 </header>
 <div class="page-main-block">
     <nav class="nav-menu">
-        <a href="mainMenu.html" class="main-page-ref">
+        <a href="mainMenu.html" class="nav-page-ref">
             <p>Main</p>
         </a>
-        <ul class="nav-menu-ul">
-            <li class="nav-menu-li"><a href="mainTop.html" class="nav-menu-ref">Top</a></li>
-            <li class="nav-menu-li"><a href="" class="nav-menu-ref">Charts</a></li>
-            <li class="nav-menu-li"><a href="" class="nav-menu-ref">Upcoming</a></li>
-        </ul>
+        <a href="mainTop.html" class="nav-page-ref">
+            <p>Top</p>
+        </a>
+        <a href="mainGallery.html" class="nav-page-ref">
+            <p>Gallery</p>
+        </a>
     </nav>
     <div class="main-info-block">
+        <div class="main-radio">
+            <div class="main-radio-player">
+                <audio src="music" id="audio"></audio>
+                <h1>Player</h1>
+                <h2 class="song-name-header">---</h2>
+                <h3 class="artist-header">---</h3>
+                <div class="song-slider">
+                    <input type="range" value="0" class="seek-bar">
+                </div>
+                <div class="controls">
+                    <button class="control-btn" id="play-btn">Play</button>
+                </div>
+            </div>
+        </div>
         <div class="main-news">
-            <h3>News</h3>
+            <h3 id="news-title">News</h3>
             <div id="news-container-main" class="news-main-container">            </div>
             <div id="news-form-container">
                 <form id="news-form">
                     <label>
                         Заголовок:
-                        <input type="text" id="news-title" required>
+                        <input type="text" id="news-name" required>
                     </label>
                     <label>
                         Описание:
@@ -51,14 +68,30 @@
                 </form>
             </div>
         </div>
-        <div class="main-radio">
-            Z-
-        </div>
-        <div class="main-chat">
+        <div class="main-gallery">
 
         </div>
     </div>
 </div>
-<footer></footer>
+<footer>
+    <aside>
+        <h4>Sponsors&#10084;</h4>
+        <p>
+            <i>dudeinblack</i><br>
+            <i>woopty123</i><br>
+            <i>GhostFaceKillah</i>
+        </p>
+    </aside>
+    <div class="footer__instrument-container">
+        <pre>
+======o     o======
+   ___________
+  |___________|
+   |\  /\  /\|
+   |_\/__\/__|
+  |___________| AH
+        </pre>
+    </div>
+</footer>
 </body>
 </html>
